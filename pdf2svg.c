@@ -65,7 +65,7 @@ int convertPage(PopplerPage *page, const char* svgFilename)
     drawcontext = cairo_create(surface);
 
     // Render the PDF file into the SVG file
-    poppler_page_render(page, drawcontext);
+    poppler_page_render_for_printing(page, drawcontext);
     cairo_show_page(drawcontext);
 
     // Close the SVG file
